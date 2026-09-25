@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vida Clara — informações de saúde para o dia a dia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2b26;
+    --paper:#f6f3ea;
+    --pine:#22443a;
+    --pine-2:#2f5c4d;
+    --clay:#b5563c;
+    --line: rgba(28,43,38,0.15);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eceee9;
+      --paper:#14201c;
+      --pine:#8fc9b3;
+      --pine-2:#6fae95;
+      --clay:#e08a6d;
+      --line: rgba(236,238,233,0.15);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eceee9;
+    --paper:#14201c;
+    --pine:#8fc9b3;
+    --pine-2:#6fae95;
+    --clay:#e08a6d;
+    --line: rgba(236,238,233,0.15);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top: env(safe-area-inset-top, 0px);}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter', sans-serif; line-height:1.6;
+  }
+  h1,h2,h3{ font-family:'Fraunces', serif; font-weight:600; margin:0; }
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+
+  header{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .nav{display:flex; justify-content:space-between; align-items:center;}
+  .logo{font-family:'Fraunces', serif; font-size:1.3rem; font-weight:600;}
+  .logo span{color:var(--clay);}
+  nav a{color:var(--ink); text-decoration:none; margin-left:24px; font-size:0.95rem;}
+  nav a:hover{color:var(--pine-2);}
+
+  .hero{padding:72px 0 56px; border-bottom:1px solid var(--line);}
+  .hero h1{font-size:clamp(2.1rem, 5vw, 3.4rem); line-height:1.15; max-width:14ch;}
+  .hero p{max-width:52ch; font-size:1.15rem; margin-top:20px; color:var(--ink); opacity:0.85;}
+
+  .articles{padding:56px 0;}
+  .articles h2{font-size:1.6rem; margin-bottom:32px;}
+  .article-list{display:flex; flex-direction:column;}
+  .article{
+    display:grid; grid-template-columns: 90px 1fr; gap:20px;
+    padding:28px 0; border-top:1px solid var(--line);
+  }
+  .article:last-child{border-bottom:1px solid var(--line);}
+  .tag{font-size:0.85rem; color:var(--pine-2); padding-top:4px;}
+  .article h3{font-size:1.25rem; margin-bottom:8px;}
+  .article p{margin:0; opacity:0.8; max-width:65ch;}
+
+  .trust{
+    padding:56px 0; border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns: 1fr 1fr; gap:40px;
+  }
+  .trust h2{font-size:1.5rem; margin-bottom:14px;}
+  .trust p{opacity:0.85; max-width:48ch;}
+
+  footer{padding:36px 0; font-size:0.9rem; opacity:0.7;}
+
+  @media (max-width: 640px){
+    .article{grid-template-columns: 1fr;}
+    .tag{padding-top:0;}
+    .trust{grid-template-columns: 1fr;}
+    nav a{margin-left:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Vida <span>Clara</span></div>
+    <nav>
+      <a href="#artigos">Artigos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Saúde explicada sem pressa e sem jargão.</h1>
+    <p>Artigos claros sobre corpo, mente e hábitos do dia a dia — escritos para ajudar você a entender, não para substituir seu médico.</p>
+  </div>
+</section>
+
+<section class="articles" id="artigos">
+  <div class="wrap">
+    <h2>Últimos artigos</h2>
+    <div class="article-list">
+      <div class="article">
+        <div class="tag">Sono</div>
+        <div>
+          <h3>Por que acordar no mesmo horário importa mais do que dormir cedo</h3>
+          <p>A regularidade do relógio biológico pesa mais na qualidade do sono do que a hora exata em que você deita.</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="tag">Nutrição</div>
+        <div>
+          <h3>Fibras: o nutriente que a maioria dos pratos brasileiros deixa de lado</h3>
+          <p>Feijão, frutas com casca e grãos integrais fazem diferença na digestão e na saciedade — veja como incluir mais no dia a dia.</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="tag">Saúde mental</div>
+        <div>
+          <h3>Ansiedade não é só "nervosismo": entenda os sinais no corpo</h3>
+          <p>Palpitação, tensão muscular e insônia podem ser manifestações físicas de ansiedade — e reconhecer isso é o primeiro passo.</p>
+        </div>
+      </div>
+      <div class="article">
+        <div class="tag">Prevenção</div>
+        <div>
+          <h3>Check-ups que valem a pena depois dos 30</h3>
+          <p>Exames simples de sangue e pressão detectam problemas antes que virem sintomas. Veja o que priorizar por faixa etária.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="sobre">
+  <div>
+    <h2>Sobre o Vida Clara</h2>
+    <p>Um espaço para traduzir informação de saúde em linguagem simples, baseada em fontes confiáveis — sem alarmismo e sem promessas milagrosas.</p>
+  </div>
+  <div>
+    <h2>Um aviso importante</h2>
+    <p>Este conteúdo é educativo e não substitui consulta, diagnóstico ou tratamento com um profissional de saúde.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Vida Clara. Conteúdo educativo — não é aconselhamento médico.
+  </div>
+</footer>
+
+</body>
+</html>
