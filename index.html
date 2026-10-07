@@ -3,162 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vida Clara — informações de saúde para o dia a dia</title>
+<title>Jeny — construindo, hackeando e aprendendo em público</title>
+<meta name="description" content="Roadmap de 5 meses: eletrônica, robótica, cultura maker e hacker, idiomas e renda com projetos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#1c2b26;
-    --paper:#f6f3ea;
-    --pine:#22443a;
-    --pine-2:#2f5c4d;
-    --clay:#b5563c;
-    --line: rgba(28,43,38,0.15);
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --ink:#eceee9;
-      --paper:#14201c;
-      --pine:#8fc9b3;
-      --pine-2:#6fae95;
-      --clay:#e08a6d;
-      --line: rgba(236,238,233,0.15);
-    }
-  }
-  :root[data-theme="dark"]{
-    --ink:#eceee9;
-    --paper:#14201c;
-    --pine:#8fc9b3;
-    --pine-2:#6fae95;
-    --clay:#e08a6d;
-    --line: rgba(236,238,233,0.15);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-padding-top: env(safe-area-inset-top, 0px);}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:'Inter', sans-serif; line-height:1.6;
-  }
-  h1,h2,h3{ font-family:'Fraunces', serif; font-weight:600; margin:0; }
-  .wrap{max-width:920px; margin:0 auto; padding:0 24px;}
-
-  header{
-    border-bottom:1px solid var(--line);
-    padding:20px 0;
-  }
-  .nav{display:flex; justify-content:space-between; align-items:center;}
-  .logo{font-family:'Fraunces', serif; font-size:1.3rem; font-weight:600;}
-  .logo span{color:var(--clay);}
-  nav a{color:var(--ink); text-decoration:none; margin-left:24px; font-size:0.95rem;}
-  nav a:hover{color:var(--pine-2);}
-
-  .hero{padding:72px 0 56px; border-bottom:1px solid var(--line);}
-  .hero h1{font-size:clamp(2.1rem, 5vw, 3.4rem); line-height:1.15; max-width:14ch;}
-  .hero p{max-width:52ch; font-size:1.15rem; margin-top:20px; color:var(--ink); opacity:0.85;}
-
-  .articles{padding:56px 0;}
-  .articles h2{font-size:1.6rem; margin-bottom:32px;}
-  .article-list{display:flex; flex-direction:column;}
-  .article{
-    display:grid; grid-template-columns: 90px 1fr; gap:20px;
-    padding:28px 0; border-top:1px solid var(--line);
-  }
-  .article:last-child{border-bottom:1px solid var(--line);}
-  .tag{font-size:0.85rem; color:var(--pine-2); padding-top:4px;}
-  .article h3{font-size:1.25rem; margin-bottom:8px;}
-  .article p{margin:0; opacity:0.8; max-width:65ch;}
-
-  .trust{
-    padding:56px 0; border-bottom:1px solid var(--line);
-    display:grid; grid-template-columns: 1fr 1fr; gap:40px;
-  }
-  .trust h2{font-size:1.5rem; margin-bottom:14px;}
-  .trust p{opacity:0.85; max-width:48ch;}
-
-  footer{padding:36px 0; font-size:0.9rem; opacity:0.7;}
-
-  @media (max-width: 640px){
-    .article{grid-template-columns: 1fr;}
-    .tag{padding-top:0;}
-    .trust{grid-template-columns: 1fr;}
-    nav a{margin-left:14px;}
-  }
+:root{--ink:#1c2b26;--paper:#f6f3ea;--pine:#22443a;--pine-2:#2f5c4d;--clay:#b5563c;--line:rgba(28,43,38,.15);
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eceee9;--paper:#14201c;--pine:#8fc9b3;--pine-2:#6fae95;--clay:#e08a6d;--line:rgba(236,238,233,.15)}}
+:root[data-theme="dark"]{--ink:#eceee9;--paper:#14201c;--pine:#8fc9b3;--pine-2:#6fae95;--clay:#e08a6d;--line:rgba(236,238,233,.15)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);padding:20px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600}
+.logo span{color:var(--clay)}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-size:.95rem}
+nav a:hover{color:var(--pine-2)}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;max-width:16ch}
+.hero p{max-width:52ch;font-size:1.15rem;margin-top:20px;opacity:.85}
+.blk{padding:56px 0;border-bottom:1px solid var(--line)}
+.blk h2{font-size:1.6rem;margin-bottom:12px}
+.blk>.wrap>p.sub{max-width:56ch;opacity:.8;margin:0 0 28px}
+.list{display:flex;flex-direction:column;margin-top:24px}
+.item{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.tag{font-size:.85rem;color:var(--pine-2);padding-top:4px;font-weight:600}
+.item h3{font-size:1.2rem;margin-bottom:6px}
+.item p{margin:0;opacity:.8;max-width:65ch}
+.frentes{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.frentes div{padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.frentes h3{font-size:1.05rem;margin-bottom:4px}
+.frentes p{margin:0;font-size:.92rem;opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0}
+.chips li{border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:.95rem}
+.lang{max-width:480px;margin:18px 0}
+.lang label{display:flex;justify-content:space-between;font-weight:600}
+.bar{height:8px;background:var(--line);border-radius:99px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--p);background:var(--pine-2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h2{font-size:1.5rem;margin-bottom:14px}
+.two p{opacity:.85;max-width:48ch}
+a.mail{color:var(--clay)}
+footer{padding:36px 0;font-size:.9rem;opacity:.7}
+@media(max-width:640px){.item{grid-template-columns:1fr;gap:4px}.tag{padding-top:0}.two{grid-template-columns:1fr}nav a{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<header><div class="wrap nav">
+<div class="logo">Jeny<span>.</span>lab</div>
+<nav aria-label="Principal"><a href="#roadmap">Roadmap</a><a href="#explorei">Já explorei</a><a href="#projetos">Projetos</a><a href="#idiomas">Idiomas</a><a href="#contato">Contato</a></nav>
+</div></header>
 
-<header>
-  <div class="wrap nav">
-    <div class="logo">Vida <span>Clara</span></div>
-    <nav>
-      <a href="#artigos">Artigos</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
-  </div>
-</header>
+<section class="hero"><div class="wrap">
+<h1>Construindo, hackeando e aprendendo em público.</h1>
+<p>Nos próximos 5 meses vou aprender eletrônica, robótica e cultura maker na prática, e registrar cada passo aqui.</p>
+</div></section>
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Saúde explicada sem pressa e sem jargão.</h1>
-    <p>Artigos claros sobre corpo, mente e hábitos do dia a dia — escritos para ajudar você a entender, não para substituir seu médico.</p>
-  </div>
-</section>
+<section class="blk" id="roadmap"><div class="wrap">
+<h2>Roadmap de 5 meses</h2>
+<p class="sub">Primeiro a base, depois o hardware, por fim a rua. Idiomas rodam em paralelo o tempo todo.</p>
+<div class="list">
+<div class="item"><div class="tag">Mês 1</div><div><h3>Pensamento computacional</h3><p>Lógica, algoritmos e decomposição de problemas. Início da rotina diária de inglês e espanhol.</p></div></div>
+<div class="item"><div class="tag">Mês 2</div><div><h3>Eletrônica</h3><p>Lei de Ohm, LEDs, botões, sensores e multímetro. Primeiros circuitos na protoboard.</p></div></div>
+<div class="item"><div class="tag">Mês 3</div><div><h3>Cultura maker</h3><p>Arduino ou ESP32, prototipagem e o primeiro projeto completo, documentado do início ao fim.</p></div></div>
+<div class="item"><div class="tag">Mês 4</div><div><h3>Robótica</h3><p>Motores, sensores e controle. Um robô simples que anda e desvia de obstáculos.</p></div></div>
+<div class="item"><div class="tag">Mês 5</div><div><h3>Cultura hacker e renda com projetos</h3><p>Segurança ética, CTFs e redes. Vender projetos, fazer freelas de eletrônica e web, dar oficinas, liderando uma equipe.</p></div></div>
+</div>
+</div></section>
 
-<section class="articles" id="artigos">
-  <div class="wrap">
-    <h2>Últimos artigos</h2>
-    <div class="article-list">
-      <div class="article">
-        <div class="tag">Sono</div>
-        <div>
-          <h3>Por que acordar no mesmo horário importa mais do que dormir cedo</h3>
-          <p>A regularidade do relógio biológico pesa mais na qualidade do sono do que a hora exata em que você deita.</p>
-        </div>
-      </div>
-      <div class="article">
-        <div class="tag">Nutrição</div>
-        <div>
-          <h3>Fibras: o nutriente que a maioria dos pratos brasileiros deixa de lado</h3>
-          <p>Feijão, frutas com casca e grãos integrais fazem diferença na digestão e na saciedade — veja como incluir mais no dia a dia.</p>
-        </div>
-      </div>
-      <div class="article">
-        <div class="tag">Saúde mental</div>
-        <div>
-          <h3>Ansiedade não é só "nervosismo": entenda os sinais no corpo</h3>
-          <p>Palpitação, tensão muscular e insônia podem ser manifestações físicas de ansiedade — e reconhecer isso é o primeiro passo.</p>
-        </div>
-      </div>
-      <div class="article">
-        <div class="tag">Prevenção</div>
-        <div>
-          <h3>Check-ups que valem a pena depois dos 30</h3>
-          <p>Exames simples de sangue e pressão detectam problemas antes que virem sintomas. Veja o que priorizar por faixa etária.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="blk"><div class="wrap">
+<h2>As 8 frentes</h2>
+<div class="frentes" style="margin-top:24px">
+<div><h3>Eletrônica</h3><p>Circuitos, componentes e medições.</p></div>
+<div><h3>Pensamento computacional</h3><p>Decompor problemas, pensar em algoritmos.</p></div>
+<div><h3>Robótica</h3><p>Sensores, atuadores e controle.</p></div>
+<div><h3>Cultura hacker</h3><p>Curiosidade técnica, segurança ética, software livre.</p></div>
+<div><h3>Cultura maker</h3><p>Aprender fazendo e compartilhar.</p></div>
+<div><h3>Liderança e influência</h3><p>Comunicação, negociação, trabalho em equipe.</p></div>
+<div><h3>Inglês e espanhol</h3><p>Ler documentação, conversar, escrever.</p></div>
+<div><h3>Renda com projetos</h3><p>Transformar o que aprendo em serviço e produto.</p></div>
+</div>
+</div></section>
 
-<section class="trust" id="sobre">
-  <div>
-    <h2>Sobre o Vida Clara</h2>
-    <p>Um espaço para traduzir informação de saúde em linguagem simples, baseada em fontes confiáveis — sem alarmismo e sem promessas milagrosas.</p>
-  </div>
-  <div>
-    <h2>Um aviso importante</h2>
-    <p>Este conteúdo é educativo e não substitui consulta, diagnóstico ou tratamento com um profissional de saúde.</p>
-  </div>
-</section>
+<section class="blk" id="explorei"><div class="wrap">
+<h2>Já explorei</h2>
+<p class="sub">Troque estes itens pelo que você já fez.</p>
+<ul class="chips"><li>Habilidade 1</li><li>Habilidade 2</li><li>Habilidade 3</li><li>Ferramenta que já usei</li></ul>
+</div></section>
 
-<footer>
-  <div class="wrap">
-    © 2026 Vida Clara. Conteúdo educativo — não é aconselhamento médico.
-  </div>
-</footer>
+<section class="blk" id="projetos"><div class="wrap">
+<h2>Projetos</h2>
+<div class="list">
+<div class="item"><div class="tag">Em breve</div><div><h3>LED com botão</h3><p>Primeiro circuito: foto, esquema e código.</p></div></div>
+<div class="item"><div class="tag">Em breve</div><div><h3>Sensor de distância</h3><p>Medir e reagir ao ambiente.</p></div></div>
+<div class="item"><div class="tag">Em breve</div><div><h3>Robô seguidor</h3><p>O projeto que junta tudo.</p></div></div>
+</div>
+</div></section>
 
+<section class="blk" id="idiomas"><div class="wrap">
+<h2>Idiomas</h2>
+<div class="lang"><label>Inglês <span>40%</span></label><div class="bar"><i style="--p:40%"></i></div></div>
+<div class="lang"><label>Espanhol <span>20%</span></label><div class="bar"><i style="--p:20%"></i></div></div>
+</div></section>
+
+<section class="blk" id="contato"><div class="wrap two">
+<div><h2>Sobre</h2><p>Um diário público de aprendizado: o que estudei, o que construí e o que deu errado, uma entrada por semana.</p></div>
+<div><h2>Contato</h2><p>Para trocar ideia, colaborar ou contratar um projeto: <a class="mail" href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a></p></div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Jeny.lab. Feito à mão, em público.</div></footer>
 </body>
 </html>
